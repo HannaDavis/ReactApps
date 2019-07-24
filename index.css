@@ -1,13 +1,72 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.main-content{
+  width: 400px;
+  margin: auto;
+  height: 400px;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.bag__img{
+  width: 300px;
+  margin: 0 auto;
+  display: block;
+}
+form h3{
+  text-align: center;
+}
+.button {
+  margin: 3em auto;
+  padding: 1em;
+  cursor: pointer;
+  background: none;
+  text-decoration: none;
+  color: black;
+  border: 1px solid #eee;
+  display: block;
+}
+.hollow {
+  transition-duration: 0.3s;
+  transition-property: background;
+  transform: translateZ(0);
+}
+.hollow:hover {
+  background: #1abc9c;
+  color: white;
+}
+input {
+  background: 0;
+  border: 0;
+  outline: none;
+  width: 100%;
+  max-width: 400px;
+  font-size: 1.5em;
+  transition: padding 0.3s 0.2s ease;
+  text-align: center;
+}
+input:focus {
+  padding-bottom: 5px;
+}
+input:focus + .line:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.block__holder {
+  position: relative;
+}
+.block__holder .line {
+  width: 400px;
+  height: 3px;
+  position: absolute;
+  bottom: -8px;
+  background: #bdc3c7;
+}
+.block__holder .line:after {
+  content: " ";
+  position: absolute;
+  float: left;
+  width: 400px;
+  height: 3px;
+  -webkit-transform: scalex(0);
+          transform: scalex(0);
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  background: #1abc9c;
 }
